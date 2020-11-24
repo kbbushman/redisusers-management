@@ -39,7 +39,7 @@ app.get('/users/add', (req, res) => {
 app.post('/users/search', (req, res) => {
   const id = req.body.id;
 
-  client.hgetall(id, (err, obj) => {
+  redisClient.hgetall(id, (err, obj) => {
     if (!obj) {
       res.render('searchusers', {
         error: 'User does not exist',
