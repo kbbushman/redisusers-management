@@ -77,7 +77,7 @@ app.post('/users/add', (req, res) => {
 });
 
 app.delete('/users/delete/:id', (req, res) => {
-  client.del(req.params.id);
+  redisClient.del(req.params.id);
   res.redirect('/');
 });
 
