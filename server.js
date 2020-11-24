@@ -60,7 +60,7 @@ app.post('/users/add', (req, res) => {
   const phone = req.body.phone;
   const email = req.body.email;
 
-  client.hmset(id, [
+  redisClient.hmset(id, [
     'first_name', first_name,
     'last_name', last_name,
     'phone', phone,
