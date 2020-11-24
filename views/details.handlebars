@@ -1,0 +1,16 @@
+<div style="overflow: hidden;">
+  <a href="/" class="btn btn-info float-right">Back</a>
+</div>
+
+<div class="mb-2">
+  <h2>{{user.first_name}} {{user.last_name}} [{{user.id}}]</h2>
+
+  <ul class="list-group">
+    <li class="list-group-item"><strong>Phone: </strong>{{user.phone}}</li>
+    <li class="list-group-item"><strong>Email: </strong>{{user.email}}</li>
+  </ul>
+</div>
+
+<form action="/users/delete/{{user.id}}?_method=DELETE" method="POST">
+  <input type="submit" value="Delete" class="btn btn-danger" />
+</form>

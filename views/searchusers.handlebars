@@ -1,0 +1,11 @@
+{{#if error}} <div class='alert alert-danger'>{{error}}</div> {{/if}}
+
+<h2 class="mb-3">Search Users</h2>
+
+
+<form action="/users/search" method="POST" class="form-inline">
+  <div class="form-group">
+    <input type="text" class="form-control" name="id" placeholder="example: user001" />
+  </div>
+  <input type="submit" value="Search" class="btn btn-primary" />
+</form>
